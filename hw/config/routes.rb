@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
 
-  root "products#contact"
-
-  get "/details" => 'products#contact'
-
-
   get("/greet", :controller => 'greets', :action => 'greet')
 
+  root "products#contact"
+
   get("/contact", :controller => 'products', :action => 'contact')
+
+
+  
+
+  get("/contact_submitted", :controller => 'products', :action => 'contact_submitted')
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
